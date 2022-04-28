@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l -a -R | find . -name '*.gif' -type f | sed -e 's/\.gif$//'
+ls -1 | find . -name '*.gif' -type f -printf '%f\n' | cut -d "." -f 1 | sort
