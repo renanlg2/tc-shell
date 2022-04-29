@@ -1,2 +1,2 @@
 #!/bin/bash
-tr '\t ' '|' | cut -d '|' -f 1 | sort | uniq -c | sort -n -r | head -n 11 | tr ' ' '|' | cut -d '|' -f 5,6 | cut -d '|' -f 2
+cat log3.tsv | tr '\t ' '|' | cut -d '|' -f 1 | tail -n +2 | sort | uniq -c | sort -n -r | head -n 11 | tr ' ' '|' | rev | cut -d '|' -f 1,2 | rev | cut -d '|' -f 2
